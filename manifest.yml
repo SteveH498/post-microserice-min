@@ -1,0 +1,11 @@
+---
+applications:
+- name: post
+  memory: 1024M
+  instances: 2
+  path: target/post-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  services:
+  - posts-db
+  host: post
+  domain: cfapps.sap.hana.ondemand.com
