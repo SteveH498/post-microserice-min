@@ -33,4 +33,9 @@ public class PostController {
 		postRepository.save(post);
 	}
 
+	@RequestMapping(method = RequestMethod.PUT, path = "/{id}")
+	public void updatePost(@RequestBody Post post) {
+		postRepository.save(post);
+	}
+	
 }
