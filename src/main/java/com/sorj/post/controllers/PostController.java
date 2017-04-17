@@ -29,13 +29,13 @@ public class PostController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public void createPost(@RequestBody Post post) {
-		postRepository.save(post);
+	public Post createPost(@RequestBody Post post) {
+		return postRepository.save(post);
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, path = "/{id}")
-	public void updatePost(@RequestBody Post post) {
-		postRepository.save(post);
+	public Post updatePost(@RequestBody Post post) {
+		return postRepository.save(post);
 	}
 	
 }
